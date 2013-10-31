@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppThemeDark" parent="AppBaseTheme">
+		<item name="switchStyle">@style/switch_dark</item>
+		<item name="textAppearance">@style/TextAppearance</item>
+	</style>
+</resources>

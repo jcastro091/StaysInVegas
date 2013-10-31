@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sideHandle1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/navigation_bar"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:paddingTop="10dp"
+        android:text="People"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/button_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:background="@drawable/btn_nearby_drawable" />
+
+        <Button
+            android:id="@+id/button_fav"
+            style="@style/TextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/button_nearby"
+            android:layout_toRightOf="@+id/button_nearby"
+            android:background="@drawable/btn_favorite_drawable" />
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabView"
+        android:layout_below="@+id/relativeLayout1"
+        android:numColumns="3" >
+    </GridView>
+
+    <!-- Sliding drawer content -->
+    <LinearLayout
+        android:id="@+id/sideContent"
+        android:layout_width="270dip"
+        android:layout_height="fill_parent"
+        android:topOffset="50dp"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/searchbar"
+            android:inputType="text"
+            android:paddingBottom="10dp"
+            android:paddingLeft="27dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" />
+
+        <ListView
+            android:id="@+id/listContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_img"
+            android:cacheColorHint="#FFFFFFFF"
+            android:listSelector="@android:color/transparent"
+            android:textColor="#FFFFFFFF" >
+            
+        </ListView>
+    </LinearLayout>
+
+    <!-- Sliding drawer handle -->
+
+    <ImageView
+        android:id="@+id/sideHandle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:src="@drawable/btn_list" />
+
+    <ImageView
+        android:id="@+id/sideHandle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/sideContent"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:src="@drawable/btn_list"
+        android:visibility="invisible" />
+
+   	<include
+        android:id="@+id/tabView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/tab_bar" />
+
+</RelativeLayout>

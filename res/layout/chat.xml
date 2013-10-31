@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/navigation_bar"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:paddingTop="10dp"
+        android:text="Chat Name"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/chatHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relLay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:background="#FFFFFF"
+        android:cacheColorHint="#FFFFFFFF"
+        android:clickable="false"
+        android:divider="#FFFFFFFF"
+        android:listSelector="@android:color/transparent" >
+
+    </ListView>
+    
+	<Button
+	    android:id="@+id/add_button"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_alignBottom="@+id/textView1"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_margin="3dp"
+	    android:background="@drawable/btn_gray2"
+	    android:padding="2dp"
+	    android:onClick="onClick"
+	    android:text="+"
+	    android:textSize="20sp"
+	    android:textColor="#FFFFFF" />
+
+	<RelativeLayout
+	    android:id="@+id/relLay"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="#DADADA" >
+
+		<LinearLayout
+		    android:id="@+id/linearLayout1"
+		    android:layout_width="150dp"
+		    android:layout_height="match_parent"
+		    android:layout_centerInParent="true"
+		    android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+		    android:orientation="horizontal" >
+	    
+			<EditText
+			    android:id="@+id/editText1"
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:layout_weight="1"
+			    android:background="@drawable/text"
+			    android:ellipsize="end"
+			    android:ems="10"
+			    android:hint="Message"
+			    android:inputType="textMultiLine"
+			    android:padding="5dp"
+			    android:singleLine="false"
+			    android:textColor="#000000"
+			    android:textSize="16sp" >
+			    
+		    <requestFocus />
+	    </EditText>
+
+		</LinearLayout>
+		
+		<Button
+		    android:id="@+id/button2"
+		    android:layout_width="64dp"
+		    android:layout_height="32dp"
+		    android:layout_centerVertical="true"
+		    android:layout_toRightOf="@id/linearLayout1"
+		    android:background="@drawable/bubble_btn"
+		    android:text="Send"
+		    android:textColor="#FFFFFF" />
+
+		<Button
+		    android:id="@+id/button1"
+		    android:layout_width="40dp"
+		    android:layout_height="40dp"
+		    android:layout_centerVertical="true"
+		    android:layout_toLeftOf="@id/linearLayout1"
+		    android:background="@drawable/icon_camera" />
+
+	</RelativeLayout>
+
+	<include
+        android:id="@+id/camera"
+    	android:layout_width="190dp"
+    	android:layout_height="190dp"
+        android:layout_centerInParent="true"
+        layout="@layout/camera_alert" />
+
+	<RelativeLayout
+	    android:id="@+id/alert"
+	    android:layout_width="190dp"
+	    android:layout_height="175dp"
+	    android:layout_centerInParent="true"
+	    android:background="@drawable/alert_window"
+	    android:padding="10dp"
+		android:visibility="gone" > -->
+
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="150dp"
+	        android:layout_height="25dp"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp"
+	        android:gravity="center_horizontal"
+	        android:text="Remove photo?"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+
+	    <Button
+	        android:id="@+id/imageButton4"
+	        android:layout_width="150dp"
+	        android:layout_height="50dp"
+	        android:layout_alignLeft="@+id/imageButton5"
+	        android:layout_below="@+id/imageButton5"
+			android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:background="@drawable/btn_red_alert"
+	        android:text="Delete"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+
+	    <Button
+	        android:id="@+id/imageButton5"
+	        android:layout_width="150dp"
+	        android:layout_height="50dp"
+	        android:layout_alignLeft="@+id/textView2"
+	        android:layout_below="@+id/textView2"
+	        android:background="@drawable/btn_red_alert"
+	        android:text="Cancel"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+
+	</RelativeLayout>
+	
+	<LinearLayout
+	    android:id="@+id/linearLayout2"
+	    android:background="#FFFFFFFF"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/relLay"
+	    android:layout_centerHorizontal="true"
+	    android:orientation="vertical"
+	    android:visibility="invisible" >
+
+		<ImageView
+		    android:id="@+id/imageView1"
+		    android:layout_width="100dp"
+		    android:layout_height="100dp"
+		    android:layout_gravity="center" />
+	    
+	</LinearLayout>
+
+</RelativeLayout>

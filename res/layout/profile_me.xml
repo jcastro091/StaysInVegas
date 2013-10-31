@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.majestyk.vegas"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:background="#000000"
+        android:src="@drawable/default_image" />
+
+    <com.majestyk.vegas.ClickableSlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_above="@+id/tabView"
+        android:allowSingleTap="false"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <RelativeLayout
+            android:id="@+id/handle"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_above="@+id/slidingDrawer1"
+            android:background="#000000"
+            android:tag="click_intercepted" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_above="@+id/handle_button" >
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true" >
+                </View>
+
+                <EditText
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/view1"
+                    android:background="#000000"
+                    android:gravity="center"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:tag="click_intercepted"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="24sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/profile_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/view1"
+                    android:background="#000000"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:tag="click_intercepted"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/handle_button"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_alignParentBottom="true"
+                android:background="#DADADA"
+                android:drawableTop="@drawable/pull_down_tab" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp" >
+
+                <TextView
+                    android:id="@+id/About"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="About"
+                    android:textColor="#929292"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#FFFFFF"
+                    android:hint="Tap to Edit"
+                    android:inputType="text"
+                    android:textColor="#B3B3B3"
+                    android:textColorHint="#B3B3B3"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DADADA" />
+
+                <TextView
+                    android:id="@+id/Interests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Interested in"
+                    android:textColor="#929292"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/interests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#FFFFFF"
+                    android:hint="Tap to Edit"
+                    android:inputType="text"
+                    android:textColor="#B3B3B3"
+                    android:textColorHint="#B3B3B3"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DADADA" />
+
+                <TextView
+                    android:id="@+id/Plans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Vegas Plans"
+                    android:textColor="#929292"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/plans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#FFFFFF"
+                    android:hint="Tap to Edit"
+                    android:inputType="text"
+                    android:textColor="#B3B3B3"
+                    android:textColorHint="#B3B3B3"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DADADA" />
+
+                <TextView
+                    android:id="@+id/party_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Party Size"
+                    android:textColor="#929292"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/Party_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#FFFFFF"
+                    android:hint="Tap to Edit"
+                    android:inputType="number"
+                    android:textColor="#B3B3B3"
+                    android:textColorHint="#B3B3B3"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DADADA" />
+
+                <TextView
+                    android:id="@+id/profile_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Gender"
+                    android:textColor="#929292"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/Profile_Sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#FFFFFF"
+                    android:hint="Tap to Edit"
+                    android:inputType="text"
+                    android:textColor="#B3B3B3"
+                    android:textColorHint="#B3B3B3"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DADADA" />
+
+                <TextView
+                    android:id="@+id/discover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Discoverable"
+                    android:textColor="#929292"
+                    android:textSize="20sp" />
+
+                <de.ankri.views.Switch
+                    style="@style/switch_dark"
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DADADA" />
+
+                <TextView
+                    android:id="@+id/high_pro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Discoverable"
+                    android:textColor="#929292"
+                    android:textSize="20sp" />
+
+                <de.ankri.views.Switch
+                    style="@style/switch_dark"
+                    android:id="@+id/switch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp" >
+                </de.ankri.views.Switch>
+            </LinearLayout>
+        </ScrollView>
+    </com.majestyk.vegas.ClickableSlidingDrawer>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/navigation_bar"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:paddingTop="10dp"
+        android:text="Me"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:src="@drawable/icon_camera" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dp"
+        android:background="@drawable/btn_gray"
+        android:onClick="onClick"
+        android:padding="2dp"
+        android:text="Save"
+        android:textColor="#FFFFFF" />
+
+    <include
+        android:id="@+id/tabView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/tab_bar" />
+
+    <include
+        android:id="@+id/camera"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_centerInParent="true"
+        layout="@layout/camera_alert" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dp"
+        android:background="@drawable/btn_gray"
+        android:onClick="onClick"
+        android:padding="2dp"
+        android:text="Logout"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

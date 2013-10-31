@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/navigation_bar"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:paddingTop="10dp"
+        android:text="Select Users"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/searchBar"
+        android:background="#FFFFFF"
+		android:cacheColorHint="#FFFFFFFF"
+        android:listSelector="@android:color/transparent" >
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:background="@drawable/searchbar"
+        android:drawableLeft="@drawable/searchglass"
+        android:drawablePadding="5dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:ems="10" >
+    </EditText>
+    
+	<Button
+	    android:id="@+id/done_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@+id/textView1"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_margin="3dp"
+	    android:background="@drawable/btn_gray"
+	    android:padding="2dp"
+	    android:onClick="onClick"
+	    android:text="Done"
+	    android:textColor="#FFFFFF" />
+    
+	<Button
+	    android:id="@+id/cancel_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@+id/textView1"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_margin="3dp"
+	    android:background="@drawable/btn_gray"
+	    android:padding="2dp"
+	    android:onClick="onClick"
+	    android:text="Cancel"
+	    android:textColor="#FFFFFF" />
+
+	<RelativeLayout android:id="@+id/alert"
+	    android:layout_width="250dp"
+	    android:layout_height="150dp"
+	    android:layout_centerInParent="true"
+	    android:background="@drawable/alert_window"
+		android:padding="12dp"
+		android:visibility="gone" >
+	    
+	    <TextView
+	        android:id="@+id/enter_topic"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+			android:layout_marginTop="5dp"
+	        android:layout_marginBottom="10dp"
+	        android:text="Enter Topic"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" >
+	        
+	    </TextView>
+
+	    <EditText
+	        android:id="@+id/topic"
+	        android:layout_width="match_parent"
+	        android:layout_height="30dp"
+	        android:layout_below="@+id/enter_topic"
+	        android:layout_centerHorizontal="true"
+	        android:background="@drawable/textfield"
+	        android:textSize="16sp" >
+
+	    </EditText>
+
+	    <Button
+	        android:id="@+id/imageButton2"
+	        android:layout_width="110dp"
+	        android:layout_height="50dp"
+	        android:layout_alignRight="@+id/topic"
+	        android:layout_below="@+id/topic"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="10dp"
+	        android:padding="2dp"
+	        android:background="@drawable/btn_red_alert"
+	        android:text="OK"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+
+	    <Button
+	        android:id="@+id/imageButton1"
+	        android:layout_width="110dp"
+	        android:layout_height="50dp"
+	        android:layout_alignLeft="@+id/topic"
+	        android:layout_below="@+id/topic"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="10dp"
+	        android:padding="2dp"
+	        android:background="@drawable/btn_gray"
+	        android:text="Cancel"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp" />
+
+</RelativeLayout>
+	
+</RelativeLayout>
